@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.1/examples/carousel/ -->
+<html lang="zh-TW">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>學歷與未來職場相關分析</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="./Carousel Template for Bootstrap_files/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./Carousel Template for Bootstrap_files/carousel.css" rel="stylesheet">
+    <link href="./Carousel Template for Bootstrap_files/css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script>
+        function resizeIframe(obj) {
+            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+        }
+    </script>
+</head>
+<span id="warning-container"><i data-reactroot=""></i></span>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            <a class="navbar-brand" href="https://getbootstrap.com/docs/4.1/examples/carousel/#">學歷與未來職場相關分析</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#main">主頁<span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#103to106">升學率分析</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#edu_analyze_hr">各產業與教育程度之薪資差別</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" href="#work_analyze_hr">求職分析</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main role="main">
+        <!-- Intro -->
+        <div class="jumbotron jumbotron-fluid" id="main">
+            <div class="container">
+                <h1 class="display-4">學歷與未來職場相關分析</h1>
+                <br />
+                <p class="lead">每年的研究所考季有許多學生為了不同的原因準備攻讀研究所，常見的原因是為了增加未來工作的薪水和父母期望，<br /> 但到底研究所的學位與薪資和未來是否能夠更容易找到工作是否有關呢？
+                    <br /> 我們想要更可靠地使用資料分析去驗證這個認知是否正確。
+                </p>
+                <p class="lead"><br/>我們會帶領你從各個角度切入：升學率、產業、教育程度，並且再驗證升學是否真的能夠增加一個人的價值，<br/>分析出是否需要考研究所，以及哪個科系考研究所會比較需要考研究所！</p>
+                <!-- <p>首先我們先看看歷年來攻讀研究所的比例變化，探討攻讀研究所是否是時代所趨，近年來的變化又是如何？</p> -->
+            </div>
+        </div>
+        <!-- Content -->
+        <div class="container marketing">
+
+            <!-- 1. 升學率 -->
+            <div id="103to106">
+                <h2 class="featurette-heading">升學率分析</h2>
+                <p class="lead">大專院校畢業人數 vs. 碩士入學人數</p>
+                <!-- 103to106 - 1 -->
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <div id="10310601"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="featurette-heading">大學畢業</h2>
+                        <p class="lead mx-auto">每年大四的準畢業生普遍是逐年增長的，這也代表著碩士以上的學歷的需求可能是會逐年增加的 。</p>
+                    </div>
+                </div>
+                <!-- 103to106 - 2 -->
+                <div class="row featurette">
+                    <div class="col-md-5">
+                        <h2 class="featurette-heading">碩士入學</h2>
+                        <p class="lead mx-auto">
+                            毫不意外的是，當我們去計算歷年來碩士入學人數時，人數的趨勢是逐年增加的。 <br /> 然而最令人訝異的是，即便 106 年因為生育率下降的關係導致大專院校人數減少，但是就讀研究所的人數卻不減反增。
+                        </p>
+                    </div>
+                    <div class="col-md-7">
+                        <div id="10310602"></div>
+                    </div>
+                </div>
+                <!-- 103to106 - 3 -->
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <div id="10310603"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="featurette-heading">升學率</h2>
+                        <p class="lead mx-auto">
+                            我們預計該學年大專院校的畢業生將於隔年選擇是否就讀研究所，因此使用這些資料來分析大專院校畢業後的升學率。
+                        </p>
+                    </div>
+                </div>
+                <!-- 103to106 - conclusion -->
+                <p class="lead">
+                    由圖表可以得知近年來研究所的升學率穩定的上升，目前大專院校生畢業後的主要趨勢是偏向繼續攻讀研究所。<br/> 然而，對大專院校生而言，就讀研究所是否真的是必要的嗎?
+                    <br/> 以下我們將從最直接的薪水與求職容易程度下去分析，看看有沒有研究所相關的學歷對於二者的影響。
+                </p>
+            </div>
+
+            <hr id="edu_analyze_hr" class="featurette-divider">
+
+            <!-- 2. 各產業不同教育程度分析 -->
+            <div id="edu_analyze">
+                <h2 class="featurette-heading">各產業與教育程度之薪資差別</h2>
+                <p class="lead">大學 vs. 研究所</p>
+                <!-- <iframe src="https://plotdb.io/v/chart/18073" frameborder="0" scrolling="no" class="col-lg-12" height="700px"></iframe>
+                <iframe src="https://plotdb.io/v/chart/18023" frameborder="0" scrolling="no" class="col-lg-12" height="700px"></iframe> -->
+                <iframe src="https://plotdb.io/v/chart/18072" frameborder="0" scrolling="no" class="col-lg-12" height="700px"></iframe>
+                <p class="lead">我們單純分析 105 年各產業不同教育程度，觀察學歷是否影響剛入產業時的薪資。<br/> 首先從折線圖的部分，我們可以明顯的得知研究所以上的薪資各行業上面都是超過大學學歷的。</p>
+
+                <img class="featurette-image img-fluid" src="./data/薪資差額.png">
+                <p class="lead">在此我們進一步的分析哪一個行業對於大學與研究所的薪資差距最大，較能反映出哪個行業對於研究所的人才是比較需要的。 比較需要高學歷的人才的行業包含了科技技術服務業，金融保險業，以及工業製造與能源相關行業。</p>
+                <p class="lead">實際上去比較大學與研究所的薪資差額，平均來說，研究生(或以上)的薪資會比大學生多4000元左右，儘管每個科系不同，但是確實有相當的差距。</p>
+                <p class="lead">接著仔細觀查長條圖的部分，經常性薪資比較接近於大學學歷，也代表社會的工作普遍學歷基於大學以上。</p>
+            </div>
+
+            <hr id="work_analyze_hr" class="featurette-divider">
+
+            <!-- 3. 求職分析 -->
+            <div id="work_analyze">
+                <h2 class="featurette-heading">求職分析</h2>
+                <!-- <p class="lead">大學 vs. 研究所</p> -->
+                <div class="row featurette">
+                    <div class="col-md-5">
+                        <h2 class="featurette-heading">進入職場的比例</h2>
+                        <p class="lead">科系影響的不只是薪水，各科系是否能夠進入職場的比例也有差別，這也是必須考量的一點 上圖的高薪水不一定是每個人都可以拿到的呢！</p>
+                        <p class="lead">大致上各學門都有90%以上的學生能夠進入職場，代表各科系實際上還是能找到工作。 其中法律與建築9學門投入職場比例不如預期，也許是因為大部分法律系學生都是以律師為目標，而國家考試錄取了只有近10%，才導致這樣的結果。而建築學門的原因也與法律學門相近，取得執照有相當的難度。
+                        </p>
+                        <p class="lead">以上我們學歷從學位到科系對於職場的影響做了相關的分析，以上都只是學歷學系對於薪水，為了更廣泛的認知研究所是否是需要的，我們也針對職場投入的分析，分析了公司對於徵才的考量。</p>
+                    </div>
+                    <!-- <div class="col-md-5 order-md-1"> -->
+                    <iframe class="col-md-7" frameborder="0" scrolling="no" src="//plot.ly/~david6686/5.embed"></iframe>
+                    <!-- </div> -->
+                </div>
+
+                <div class="row featurette">
+                    <div class="col-md-7">
+                        <div id="isAdmit"></div>
+                    </div>
+                    <div class="col-md-5">
+                        <h2 class="featurette-heading">錄取？不錄取？</h2>
+                        <p class="lead">從該問卷調查中，我們發現真正社會求職時最重要的條件並非學歷，而比較在乎是否有相關的成果與經驗，其次是要有相關的知識背景，再來就是社會中一職都很重要的溝通能力。</p>
+                        <p class="lead">現在的社會對於工作越來越專業化，分工越來越系，學校能夠提供大致的專業知識與技術，也能提供一定程度的實習機會與實作經歷，但是仍然無法真正的完全應對社會，從這份資料就可以看得出來，對於公司來說，不管是培訓還是正職有相關的經歷與成果都是最重要的，而這些都需要出社會後一段時間的累積，往往不是學歷與科系能夠彌補的。</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+
+
+
+        <div class="jumbotron jumbotron-fluid" id="main">
+            <div class="container">
+                <h1 class="display-4">結論</h1>
+                <br />
+                <p class="lead">研究所學歷對於就業的影響力而言，以薪水來說，有沒有研究所學歷對於各行業的確有差，而就不同科系來說，我們也分析出各科系未來薪水的分布，以及各行業未來投入職場的比例。除了畢業後需要執照才能進行的工作，各科系的投入職場比例都是相當高的。最重要的是，根據職場的問卷調查，其實除了一些較為專業的高技術工作需要有相關的學科背景支持，經驗的累積才是企業錄用與否的關鍵，所以不管要不要考研究所，一定的專案製作與side job的重要性可不比學歷來得低，一切還是必須交由讀者在看了我們的資料分析之後自行決定了。</p>
+
+                <!-- <p>首先我們先看看歷年來攻讀研究所的比例變化，探討攻讀研究所是否是時代所趨，近年來的變化又是如何？</p> -->
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="container">
+            <p class="float-left">
+                <a href="https://udb.moe.edu.tw/DataDownload">大專院校校務公開資訊 - 畢業生流向與薪資概況</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://data.gov.tw/dataset/6231">大專院校校別學生數</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://data.gov.tw/dataset/6647">初任人員平均經常性薪資</a><span>&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+                <a href="https://www.taiwanjobs.gov.tw/Internet/2017/Survey/Q4_1/page01.html">2017企業徵才喜好大調查</a>
+            </p>
+            <p class="float-right"><a href="https://getbootstrap.com/docs/4.1/examples/carousel/#">Back to top</a></p>
+        </footer>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="./Carousel Template for Bootstrap_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script>
+        window.jQuery || document.write('<script src="../../assets/js/vendor/jquery-slim.min.js"><\/script>')
+    </script>
+    <script src="./Carousel Template for Bootstrap_files/popper.min.js"></script>
+    <script src="./Carousel Template for Bootstrap_files/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="./Carousel Template for Bootstrap_files/holder.min.js"></script>
+
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="500" height="500" viewBox="0 0 500 500" preserveAspectRatio="none" style="display: none; visibility: hidden; position: absolute; top: -100%; left: -100%;"><defs><style type="text/css"></style></defs><text x="0" y="25" style="font-weight:bold;font-size:25pt;font-family:Arial, Helvetica, Open Sans, sans-serif">500x500</text></svg></body>
+<script src="10310601.js"></script>
+<script src="10310602.js"></script>
+<script src="10310603.js"></script>
+<script src="isAdmit.js"></script>
+
+</html>
