@@ -18,11 +18,6 @@
     <link href="./Carousel Template for Bootstrap_files/carousel.css" rel="stylesheet">
     <link href="./Carousel Template for Bootstrap_files/css" rel="stylesheet">
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script>
-        function resizeIframe(obj) {
-            obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
-        }
-    </script>
 </head>
 <span id="warning-container"><i data-reactroot=""></i></span>
 
@@ -43,10 +38,10 @@
                         <a class="nav-link" href="#103to106_hr">升學率分析</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#edu_analyze_hr">各產業與教育程度之薪資差別</a>
+                        <a class="nav-link" href="#edu_analyze_hr">各產業與教育程度之薪資差別</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#work_analyze_hr">求職分析</a>
+                        <a class="nav-link" href="#work_analyze_hr">求職分析</a>
                     </li>
                 </ul>
             </div>
@@ -55,7 +50,10 @@
 
     <main role="main">
         <!-- Intro -->
-        <div class="jumbotron jumbotron-fluid" id="main">
+        <div class="anchor">
+            <div id="main"></div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
             <div class="container">
                 <h1 class="display-4">學歷與未來職場相關分析</h1>
                 <br />
@@ -66,7 +64,9 @@
                 <!-- <p>首先我們先看看歷年來攻讀研究所的比例變化，探討攻讀研究所是否是時代所趨，近年來的變化又是如何？</p> -->
             </div>
         </div>
-        <div id="103to106_hr"></div>
+        <div class="anchor">
+            <div id="103to106_hr"></div>
+        </div>
         <!-- Content -->
         <div class="container marketing">
 
@@ -86,14 +86,14 @@
                 </div>
                 <!-- 103to106 - 2 -->
                 <div class="row featurette">
-                    <div class="col-md-5">
+                    <div class="col-md-7 order-md-1">
+                        <div id="10310602"></div>
+                    </div>
+                    <div class="col-md-5 order-md-2">
                         <h2 class="featurette-heading">碩士入學</h2>
                         <p class="lead mx-auto">
                             毫不意外的是，當我們去計算歷年來碩士入學人數時，人數的趨勢是逐年增加的。 <br /> 然而最令人訝異的是，即便 106 年因為生育率下降的關係導致大專院校人數減少，但是就讀研究所的人數卻不減反增。
                         </p>
-                    </div>
-                    <div class="col-md-7">
-                        <div id="10310602"></div>
                     </div>
                 </div>
                 <!-- 103to106 - 3 -->
@@ -115,7 +115,9 @@
                 </p>
             </div>
 
-            <hr id="edu_analyze_hr" class="featurette-divider">
+            <div class="anchor">
+                <hr id="edu_analyze_hr" class="featurette-divider">
+            </div>
 
             <!-- 2. 各產業不同教育程度分析 -->
             <div id="edu_analyze">
@@ -132,13 +134,18 @@
                 <!-- <p class="lead">接著仔細觀查長條圖的部分，經常性薪資比較接近於大學學歷，也代表社會的工作普遍學歷基於大學以上。</p> -->
             </div>
 
-            <hr id="work_analyze_hr" class="featurette-divider">
+            <div class="anchor">
+                <hr id="work_analyze_hr" class="featurette-divider">
+            </div>
 
             <!-- 3. 求職分析 -->
             <div id="work_analyze">
                 <h2 class="featurette-heading">求職分析</h2>
                 <!-- <p class="lead">大學 vs. 研究所</p> -->
                 <div class="row featurette">
+                    <!-- <div class="col-md-5 order-md-1"> -->
+                    <iframe class="col-md-7" frameborder="0" scrolling="no" src="//plot.ly/~david6686/5.embed"></iframe>
+                    <!-- </div> -->
                     <div class="col-md-5">
                         <h2 class="featurette-heading">進入職場的比例</h2>
                         <p class="lead">科系影響的不只是薪水，各科系是否能夠進入職場的比例也有差別，這也是必須考量的一點 上圖的高薪水不一定是每個人都可以拿到的呢！</p>
@@ -146,16 +153,13 @@
                         </p>
                         <p class="lead">以上我們學歷從學位到科系對於職場的影響做了相關的分析，以上都只是學歷學系對於薪水，為了更廣泛的認知研究所是否是需要的，我們也針對職場投入的分析，分析了公司對於徵才的考量。</p>
                     </div>
-                    <!-- <div class="col-md-5 order-md-1"> -->
-                    <iframe class="col-md-7" frameborder="0" scrolling="no" src="//plot.ly/~david6686/5.embed"></iframe>
-                    <!-- </div> -->
                 </div>
 
                 <div class="row featurette">
-                    <div class="col-md-7">
+                    <div class="col-md-7 order-md-2">
                         <div id="isAdmit"></div>
                     </div>
-                    <div class="col-md-5">
+                    <div class="col-md-5 order-md-1">
                         <h2 class="featurette-heading">錄取？不錄取？</h2>
                         <p class="lead">從該問卷調查中，我們發現真正社會求職時最重要的條件並非學歷，而比較在乎是否有相關的成果與經驗，其次是要有相關的知識背景，再來就是社會中一職都很重要的溝通能力。</p>
                         <p class="lead">現在的社會對於工作越來越專業化，分工越來越系，學校能夠提供大致的專業知識與技術，也能提供一定程度的實習機會與實作經歷，但是仍然無法真正的完全應對社會，從這份資料就可以看得出來，對於公司來說，不管是培訓還是正職有相關的經歷與成果都是最重要的，而這些都需要出社會後一段時間的累積，往往不是學歷與科系能夠彌補的。</p>
@@ -208,5 +212,17 @@
 <script src="10310602.js"></script>
 <script src="10310603.js"></script>
 <script src="isAdmit.js"></script>
+<script>
+    $(window).on("scroll", function() {
+        var scroll = $(window).scrollTop() + 5;
+        $(".anchor").each(function() {
+            var el = $(this).children().attr("id");
+            if (scroll >= $(this).offset().top) {
+                $("li.nav-item").removeClass("active");
+                $("a[href='#" + el + "']").parent("li.nav-item").addClass("active");
+            }
+        })
+    })
+</script>
 
 </html>
