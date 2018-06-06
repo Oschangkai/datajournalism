@@ -21,7 +21,7 @@ var Data = {
 var data = [Data]
 
 var layout = {
-    title: '103至106年 大專院校預計畢業人數',
+    title: '103至106年 大專院校預計畢業人數' + '<br><a href="https://data.gov.tw/dataset/6231">大專院校校別學生數</a>',
     xaxis: {
         range: [102, 107],
         zeroline: false
